@@ -2,10 +2,8 @@
 .git
 .gitignore
 
-
 # Docker
 .docker
-
 
 # Python
 app/__pycache__/
