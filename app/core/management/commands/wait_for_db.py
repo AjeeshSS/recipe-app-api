@@ -5,12 +5,14 @@ import time
 
 from psycopg2 import OperationalError as psycopg2operror
 
-from django.db.utils import OperationalError # Error django throus when database is not ready 
+from django.db.utils import OperationalError
+# Error django throws when database is not ready
 from django.core.management.base import BaseCommand
+
 
 class Command(BaseCommand):
     """  Command to wait for the database """
-    
+
     def handle(self, *args, **options):
         """  Encrypted for command """
         self.stdout.write('waiting for database')
