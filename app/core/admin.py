@@ -9,7 +9,7 @@ from core import models
 
 class UserAdmin(BaseUserAdmin):
     """  Define the admin pages for users.  """
-    ordering  = ['id']
+    ordering = ['id']
     list_display = ['email', 'name']
     fieldsets = (
         (None, {'fields': ('email', 'password')}),
@@ -20,7 +20,7 @@ class UserAdmin(BaseUserAdmin):
                 'fields': (
                     'is_active',
                     'is_staff',
-                     'is_superuser',
+                    'is_superuser',
                 )
             }
         ),
@@ -41,10 +41,7 @@ class UserAdmin(BaseUserAdmin):
             )
         }),
     )
-
-
-
 admin.site.register(models.User, UserAdmin)
 admin.site.register(models.Recipe)
-
-
+admin.site.register(models.Tag)
+admin.site.register(models.Ingredient)
