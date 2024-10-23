@@ -47,33 +47,39 @@ Tag and Ingredient Management:
     Create and manage tags and ingredients associated with recipes.
 
 ## API Endpoints
-User Endpoints
-    POST /api/user/create/: Create a new user.
-    POST /api/user/token/: Obtain an authentication token.
-    GET /api/user/me/: Retrieve user profile (requires authentication).
-Recipe Endpoints
-    GET /api/recipes/: List all recipes (supports filters by tags and ingredients).
-    POST /api/recipes/: Create a new recipe (requires authentication).
-    GET /api/recipes/:id/: Retrieve a specific recipe by ID.
-    PUT /api/recipes/:id/: Update a recipe (requires authentication).
-    PATCH /api/recipes/:id/: Partially update a recipe (requires authentication).
-    DELETE /api/recipes/:id/: Delete a recipe (requires authentication).
-    POST /api/recipes/:id/upload-image/: Upload an image for a recipe (requires authentication).
-Tag Endpoints
-    GET /api/tags/: List all tags (requires authentication).
-    Supports assigned_only=1 query parameter to filter tags assigned to recipes.
-    POST /api/tags/: Create a new tag (requires authentication).
-    PUT /api/tags/:id/: Update an existing tag (requires authentication).
-    DELETE /api/tags/:id/: Delete a tag (requires authentication).
-Ingredient Endpoints
-    GET /api/ingredients/: List all ingredients (requires authentication).
-    Supports assigned_only=1 query parameter to filter ingredients assigned to recipes.
-    POST /api/ingredients/: Create a new ingredient (requires authentication).
-    PUT /api/ingredients/:id/: Update an existing ingredient (requires authentication).
-    DELETE /api/ingredients/:id/: Delete an ingredient (requires authentication).
-Schema & Documentation Endpoints
-    GET /api/schema/: Retrieve the OpenAPI schema for the API.
-    GET /api/docs/: Access the Swagger documentation interface.
+
+### User Endpoints
+- **POST** `/api/user/create/`: Create a new user.
+- **POST** `/api/user/token/`: Obtain an authentication token.
+- **GET** `/api/user/me/`: Retrieve user profile (requires authentication).
+
+### Recipe Endpoints
+- **GET** `/api/recipes/`: List all recipes (supports filters by tags and ingredients).
+- **POST** `/api/recipes/`: Create a new recipe (requires authentication).
+- **GET** `/api/recipes/:id/`: Retrieve a specific recipe by ID.
+- **PUT** `/api/recipes/:id/`: Update a recipe (requires authentication).
+- **PATCH** `/api/recipes/:id/`: Partially update a recipe (requires authentication).
+- **DELETE** `/api/recipes/:id/`: Delete a recipe (requires authentication).
+- **POST** `/api/recipes/:id/upload-image/`: Upload an image for a recipe (requires authentication).
+
+### Tag Endpoints
+- **GET** `/api/tags/`: List all tags (requires authentication).
+    - Supports `assigned_only=1` query parameter to filter tags assigned to recipes.
+- **POST** `/api/tags/`: Create a new tag (requires authentication).
+- **PUT** `/api/tags/:id/`: Update an existing tag (requires authentication).
+- **DELETE** `/api/tags/:id/`: Delete a tag (requires authentication).
+
+### Ingredient Endpoints
+- **GET** `/api/ingredients/`: List all ingredients (requires authentication).
+    - Supports `assigned_only=1` query parameter to filter ingredients assigned to recipes.
+- **POST** `/api/ingredients/`: Create a new ingredient (requires authentication).
+- **PUT** `/api/ingredients/:id/`: Update an existing ingredient (requires authentication).
+- **DELETE** `/api/ingredients/:id/`: Delete an ingredient (requires authentication).
+
+### Schema & Documentation Endpoints
+- **GET** `/api/schema/`: Retrieve the OpenAPI schema for the API.
+- **GET** `/api/docs/`: Access the Swagger documentation interface.
+
 
 ## Models
     ### User
